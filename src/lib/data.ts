@@ -1,5 +1,20 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
+import helloText from "./snippets/helloworld.html?raw";
+import helloCode from "./snippets/helloworld.py?raw";
+import helloOutput from "./snippets/helloworld.out?raw";
+
+import printingText from "./snippets/printing.html?raw";
+import printingCode from "./snippets/printing.py?raw";
+import printingOutput from "./snippets/printing.out?raw";
+
+import variablesText from "./snippets/variables.html?raw";
+import variablesCode from "./snippets/variables.py?raw";
+import variablesOutput from "./snippets/variables.out?raw";
+
+import inputText from "./snippets/input.html?raw";
+import inputCode from "./snippets/input.py?raw";
+import inputOutput from "./snippets/input.out?raw";
 
 export const getFile = (fileName: string) => {
   const filePath = resolve("src/lib/snippets/" + fileName);
@@ -10,35 +25,15 @@ export const getFile = (fileName: string) => {
 
 export const content: any = {
   get helloworld() {
-    return [
-      "Hello, World!",
-      getFile("helloworld.py").code,
-      getFile("helloworld.html").code,
-      getFile("helloworld.out").code,
-    ];
+    return ["Hello, World!", helloCode, helloText, helloOutput];
   },
   get printing() {
-    return [
-      "Printing",
-      getFile("printing.py").code,
-      getFile("printing.html").code,
-      getFile("printing.out").code,
-    ];
+    return ["Printing", printingCode, printingText, printingOutput];
   },
   get variables() {
-    return [
-      "Variables",
-      getFile("variables.py").code,
-      getFile("variables.html").code,
-      getFile("variables.out").code,
-    ];
+    return ["Variables", variablesCode, variablesText, variablesOutput];
   },
   get input() {
-    return [
-      "Taking Input",
-      getFile("input.py").code,
-      getFile("input.html").code,
-      getFile("input.out").code,
-    ];
+    return ["Taking Input", inputCode, inputText, inputOutput];
   },
 };

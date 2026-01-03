@@ -1,7 +1,7 @@
 <script>
     let { data } = $props();
     import hljs from "highlight.js";
-    import "highlight.js/styles/tokyo-night-dark.css";
+    import "highlight.js/styles/atom-one-dark.css";
 
     $effect(() => {
         // We reference data.data to make the effect reactive

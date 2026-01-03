@@ -2,7 +2,7 @@
     import "./layout.css";
     import favicon from "$lib/assets/favicon.svg";
     import hljs from "highlight.js";
-    import "highlight.js/styles/tokyo-night-dark.css";
+    import "highlight.js/styles/atom-one-dark.css";
 
     $effect(() => {
         hljs.highlightAll();

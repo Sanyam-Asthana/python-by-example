@@ -1,0 +1,6 @@
+$ python types.py
+<class 'int'>
+<class 'float'>
+<class 'str'>
+<class 'bool'>
+<class 'str'>

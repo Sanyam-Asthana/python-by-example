@@ -5,6 +5,7 @@ export const load = () => {
       ["Printing", "/printing"],
       ["Variables", "/variables"],
       ["Taking Input", "/input"],
+      ["Data Types", "/types"],
     ],
   };
 };

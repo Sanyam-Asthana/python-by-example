@@ -16,6 +16,10 @@ import inputText from "./snippets/input.html?raw";
 import inputCode from "./snippets/input.py?raw";
 import inputOutput from "./snippets/input.out?raw";
 
+import typesText from "./snippets/types.html?raw";
+import typesCode from "./snippets/types.py?raw";
+import typesOutput from "./snippets/types.out?raw";
+
 export const getFile = (fileName: string) => {
   const filePath = resolve("src/lib/snippets/" + fileName);
   const code = readFileSync(filePath, "utf-8");
@@ -35,5 +39,8 @@ export const content: any = {
   },
   get input() {
     return ["Taking Input", inputCode, inputText, inputOutput];
+  },
+  get types() {
+    return ["Data Types", typesCode, typesText, typesOutput];
   },
 };

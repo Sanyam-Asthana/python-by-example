@@ -1,0 +1,4 @@
+$ python conditionals.py
+x is greater than 3
+x is not greater than 6
+x is equal to 5

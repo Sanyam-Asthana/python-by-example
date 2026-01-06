@@ -20,6 +20,14 @@ import typesText from "./snippets/types.html?raw";
 import typesCode from "./snippets/types.py?raw";
 import typesOutput from "./snippets/types.out?raw";
 
+import operatorsText from "./snippets/operators.html?raw";
+import operatorsCode from "./snippets/operators.py?raw";
+import operatorsOutput from "./snippets/operators.out?raw";
+
+import conditionalsText from "./snippets/conditionals.html?raw";
+import conditionalsCode from "./snippets/conditionals.py?raw";
+import conditionalsOutput from "./snippets/conditionals.out?raw";
+
 export const getFile = (fileName: string) => {
   const filePath = resolve("src/lib/snippets/" + fileName);
   const code = readFileSync(filePath, "utf-8");
@@ -42,5 +50,16 @@ export const content: any = {
   },
   get types() {
     return ["Data Types", typesCode, typesText, typesOutput];
+  },
+  get operators() {
+    return ["Operators", operatorsCode, operatorsText, operatorsOutput];
+  },
+  get conditionals() {
+    return [
+      "Conditionals",
+      conditionalsCode,
+      conditionalsText,
+      conditionalsOutput,
+    ];
   },
 };

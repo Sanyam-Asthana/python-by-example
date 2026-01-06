@@ -6,6 +6,8 @@ export const load = () => {
       ["Variables", "/variables"],
       ["Taking Input", "/input"],
       ["Data Types", "/types"],
+      ["Operators", "/operators"],
+      ["Conditionals", "/conditionals"],
     ],
   };
 };
